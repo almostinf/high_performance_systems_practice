@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
 def prim(graph):
     # Create an empty set to store selected vertices
     selected = set()

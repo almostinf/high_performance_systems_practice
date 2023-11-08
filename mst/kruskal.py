@@ -1,6 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import random
+
 
 def kruskal(graph):
     # Initialize the minimal island tree (MST) as an empty graph
