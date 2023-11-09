@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"strings"
 )
 
@@ -26,8 +28,13 @@ func decrypt(text string, shift int) string {
 }
 
 func main() {
-	text := "Hello, world!"
-	shift := 3
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Println("Enter text: ")
+	text, _ := reader.ReadString('\n')
+	fmt.Println("Enter shift: ")
+	var shift int
+	fmt.Scanf("%d", &shift)
 
 	encrypted := encrypt(text, shift)
 	decrypted := decrypt(encrypted, shift)
