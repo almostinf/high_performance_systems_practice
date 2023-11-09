@@ -17,9 +17,11 @@ func encrypt(text string, shift int) string {
 		i += shift - 1
 	}
 
+	fmt.Println("Parts: ")
 	for i := range parts {
 		fmt.Println(string(parts[i]))
 	}
+	fmt.Println()
 
 	encrypted := make([]byte, 0, len(text))
 
